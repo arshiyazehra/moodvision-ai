@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analyze | MoodVision AI</title>
+
+    <link rel="icon"
+          type="image/jpeg"
+          href="{{ url_for('static', filename='images/mvlogo.jpg') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <a href="/" class="brand">
+
+        <img
+            src="{{ url_for('static', filename='images/mvlogo.jpg') }}"
+            alt="MoodVision AI Logo"
+            class="nav-logo"
+        >
+
+        <span>
+            MoodVision <strong>AI</strong>
+        </span>
+
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/analyze">Analyze</a>
+
+        <a href="/about">About</a>
+
+        <a href="/analyze" class="nav-button">
+            Try Now
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- MAIN ANALYSIS SECTION -->
+
+<section class="analyze-page">
+
+    <div class="analysis-heading">
+
+        <p class="analysis-label">
+            EMOTION ANALYSIS
+        </p>
+
+        <h1>
+            Analyze your facial
+            <span>expression.</span>
+        </h1>
+
+        <p class="analysis-description">
+            Start your camera and let MoodVision AI analyze your facial expression in real time.
+        </p>
+
+    </div>
+
+
+
+    <!-- CAMERA CARD -->
+
+    <div class="camera-container">
+
+
+        <!-- CAMERA PREVIEW -->
+
+        <div class="camera-preview">
+
+            <video
+                id="webcam"
+                autoplay
+                playsinline>
+            </video>
+
+            <canvas
+                id="canvas"
+                style="display: none;">
+            </canvas>
+
+        </div>
+
+
+
+        <!-- CAMERA PLACEHOLDER -->
+
+        <div
+            id="cameraPlaceholder"
+            class="camera-placeholder">
+
+            <div class="camera-icon">
+                📷
+            </div>
+
+            <h2>
+                Ready to Scan
+            </h2>
+
+            <p>
+                Start your camera to begin real-time facial emotion analysis.
+            </p>
+
+        </div>
+
+
+
+        <!-- BUTTONS -->
+
+        <div class="camera-buttons">
+
+            <button
+                id="startCamera"
+                class="primary-button">
+
+                Start Emotion Scan 📷
+
+            </button>
+
+
+            <button
+                id="analyzeEmotion"
+                class="secondary-button"
+                style="display: none;">
+
+                Analyze Emotion ✨
+
+            </button>
+
+        </div>
+
+
+
+        <!-- STATUS -->
+
+        <p id="cameraStatus">
+
+            Click Start Emotion Scan to begin.
+
+        </p>
+
+
+
+        <!-- RESULT -->
+<!-- RESULT -->
+
+<div
+    id="resultBox"
+    class="emotion-result"
+    style="display: none;">
+
+    <div class="result-header">
+
+        <div class="result-icon" id="emotionIcon">
+            😊
+        </div>
+
+        <div>
+
+            <p class="result-label">
+                DETECTED EMOTION
+            </p>
+
+            <h2 id="detectedEmotion">
+                --
+            </h2>
+
+            <p id="confidenceText">
+                Confidence: --
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="emotion-scores">
+
+        <div class="score-row">
+            <span>😊 Happy</span>
+            <div class="score-bar">
+                <div id="happyScore"></div>
+            </div>
+            <strong id="happyValue">0%</strong>
+        </div>
+
+
+        <div class="score-row">
+            <span>😢 Sad</span>
+            <div class="score-bar">
+                <div id="sadScore"></div>
+            </div>
+            <strong id="sadValue">0%</strong>
+        </div>
+
+
+        <div class="score-row">
+            <span>😠 Angry</span>
+            <div class="score-bar">
+                <div id="angryScore"></div>
+            </div>
+            <strong id="angryValue">0%</strong>
+        </div>
+
+
+        <div class="score-row">
+            <span>😐 Neutral</span>
+            <div class="score-bar">
+                <div id="neutralScore"></div>
+            </div>
+            <strong id="neutralValue">0%</strong>
+        </div>
+
+
+        <div class="score-row">
+            <span>😲 Surprise</span>
+            <div class="score-bar">
+                <div id="surpriseScore"></div>
+            </div>
+            <strong id="surpriseValue">0%</strong>
+        </div>
+
+
+        <div class="score-row">
+            <span>😨 Fear</span>
+            <div class="score-bar">
+                <div id="fearScore"></div>
+            </div>
+            <strong id="fearValue">0%</strong>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        MoodVision <span>AI</span>
+
+    </div>
+
+    <p>
+
+        © 2026 MoodVision AI · Emotions into Insights
+
+    </p>
+
+</footer>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</body>
+
+</html>

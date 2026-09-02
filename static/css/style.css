@@ -1,0 +1,3850 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+
+:root {
+
+    --bg: #07111f;
+
+    --bg-soft: #0b1626;
+
+    --panel: #101d30;
+
+    --panel-light: #15243a;
+
+    --primary: #7c9cff;
+
+    --primary-2: #8a6cff;
+
+    --accent: #5ee2c2;
+
+    --text: #f4f7ff;
+
+    --muted: #9baac1;
+
+    --border: rgba(255, 255, 255, 0.10);
+
+}
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(124, 156, 255, 0.12),
+            transparent 30%
+        ),
+        #07111f;
+
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 22px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+}
+
+
+.brand strong {
+
+    color: var(--accent);
+
+}
+
+
+.nav-logo {
+
+    width: 52px;
+
+    height: 52px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    display: block;
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.nav-links a {
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+.nav-links a:hover {
+
+    color: white;
+
+}
+
+
+.nav-button {
+
+    padding: 13px 23px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-2)
+    );
+
+    color: white !important;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 10px 30px
+        rgba(124, 156, 255, 0.25);
+
+}
+
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    max-width: 1250px;
+
+    min-height: 680px;
+
+    margin: auto;
+
+    padding: 80px 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+}
+
+
+.hero-content {
+
+    max-width: 620px;
+
+}
+
+
+.hero-badge {
+
+    display: inline-block;
+
+    color: var(--accent);
+
+    background:
+        rgba(94, 226, 194, 0.08);
+
+    border:
+        1px solid
+        rgba(94, 226, 194, 0.15);
+
+    padding: 10px 16px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h1 {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(45px, 6vw, 76px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h1 span {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--accent)
+        );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+.hero-description {
+
+    color: var(--muted);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    max-width: 570px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+}
+
+
+.primary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 16px 25px;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-2)
+        );
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 15px 40px
+        rgba(124, 156, 255, 0.20);
+
+}
+
+
+.primary-button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+.secondary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 16px 24px;
+
+    border-radius: 13px;
+
+    border: 1px solid var(--border);
+
+    color: white;
+
+    transition: 0.3s;
+
+}
+
+
+.secondary-button:hover {
+
+    background:
+        rgba(255,255,255,0.05);
+
+}
+
+
+.emotion-preview {
+
+    margin-top: 45px;
+
+    padding: 18px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    width: 100%;
+
+    max-width: 470px;
+
+    border:
+
+        1px solid var(--border);
+
+    background:
+        rgba(16, 29, 48, 0.75);
+
+    border-radius: 18px;
+
+}
+
+
+.emotion-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 27px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(124, 156, 255, 0.12);
+
+}
+
+
+.emotion-label {
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.emotion-preview h3 {
+
+    margin-top: 5px;
+
+}
+
+
+.confidence {
+
+    margin-left: auto;
+
+    text-align: right;
+
+}
+
+
+.confidence p {
+
+    font-size: 12px;
+
+    color: var(--muted);
+
+}
+
+
+.confidence strong {
+
+    font-size: 20px;
+
+    color: var(--accent);
+
+}
+
+
+
+/* ================= AI VISUAL ================= */
+
+.hero-visual {
+
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.visual-glow {
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124, 156, 255, 0.22),
+            transparent 65%
+        );
+
+}
+
+
+.main-ai-card {
+
+    width: 380px;
+
+    min-height: 430px;
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 30px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(21, 36, 58, 0.95),
+            rgba(10, 20, 35, 0.95)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,0.35);
+
+}
+
+
+.scan-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.status-dot {
+
+    width: 9px;
+
+    height: 9px;
+
+    background: var(--accent);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 15px var(--accent);
+
+}
+
+
+.face-circle {
+
+    width: 170px;
+
+    height: 170px;
+
+    margin: 45px auto 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124,156,255,0.25),
+            rgba(124,156,255,0.04)
+        );
+
+    border:
+        1px solid
+        rgba(124,156,255,0.4);
+
+}
+
+
+.face-icon {
+
+    font-size: 75px;
+
+}
+
+
+.scan-lines {
+
+    height: 1px;
+
+    width: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--accent),
+            transparent
+        );
+
+    margin-bottom: 25px;
+
+}
+
+
+.emotion-result p {
+
+    font-size: 11px;
+
+    color: var(--muted);
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.emotion-result h2 {
+
+    margin: 7px 0 15px;
+
+    font-size: 30px;
+
+}
+
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 8px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+.progress-fill {
+
+    width: 94%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--accent)
+        );
+
+}
+
+
+.emotion-result span {
+
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 12px;
+
+    color: var(--accent);
+
+}
+
+
+.floating-card {
+
+    position: absolute;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 18px;
+
+    background:
+        rgba(21, 36, 58, 0.95);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+    font-size: 13px;
+
+    box-shadow:
+        0 20px 40px
+        rgba(0,0,0,0.25);
+
+}
+
+
+.floating-one {
+
+    top: 80px;
+
+    right: -20px;
+
+}
+
+
+.floating-two {
+
+    bottom: 70px;
+
+    left: -20px;
+
+}
+
+
+
+/* ================= SECTIONS ================= */
+
+.how-section,
+.features-section {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 100px 30px;
+
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: auto;
+
+}
+
+
+.section-heading > p:first-child {
+
+    color: var(--accent);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.section-heading h2 {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 45px;
+
+    line-height: 1.15;
+
+}
+
+
+.section-heading h2 span {
+
+    color: var(--primary);
+
+}
+
+
+.section-description {
+
+    color: var(--muted);
+
+    line-height: 1.7;
+
+    margin-top: 20px;
+
+}
+
+
+
+/* ================= STEPS ================= */
+
+.steps-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 60px;
+
+}
+
+
+.step-card {
+
+    position: relative;
+
+    padding: 35px;
+
+    min-height: 290px;
+
+    border-radius: 22px;
+
+    background:
+        rgba(16, 29, 48, 0.75);
+
+    border:
+        1px solid var(--border);
+
+    transition: 0.3s;
+
+}
+
+
+.step-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(124,156,255,0.5);
+
+}
+
+
+.step-number {
+
+    position: absolute;
+
+    right: 25px;
+
+    top: 20px;
+
+    color:
+        rgba(255,255,255,0.25);
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+}
+
+
+.step-icon {
+
+    font-size: 42px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.step-card h3 {
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.step-card p {
+
+    color: var(--muted);
+
+    line-height: 1.7;
+
+}
+
+
+
+/* ================= FEATURES ================= */
+
+.features-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 60px;
+
+}
+
+
+.feature-box {
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 248, 253, 0.82);
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+.feature-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.feature-box h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+    color: #3d2948;
+    font-weight: 700;
+}
+
+.feature-box p {
+    color: #59465f;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+
+/* ================= CTA ================= */
+
+.cta-section {
+
+    padding: 50px 30px 100px;
+
+}
+
+
+.cta-box {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 80px 30px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124,156,255,0.16),
+            rgba(94,226,194,0.08)
+        );
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+.cta-box > p {
+
+    color: var(--accent);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.cta-box h2 {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 45px;
+
+    max-width: 700px;
+
+    margin:
+        0 auto 35px;
+
+}
+
+
+.cta-box h2 span {
+
+    color: var(--primary);
+
+}
+
+
+
+/* ================= DEVELOPER CREDIT ================= */
+
+.developer-credit {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding:
+        20px 30px 80px;
+
+}
+
+
+.credit-card {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(21,36,58,0.95),
+            rgba(12,24,40,0.95)
+        );
+
+    border:
+        1px solid
+        rgba(124,156,255,0.25);
+
+    overflow: hidden;
+
+}
+
+
+.credit-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    right: -100px;
+
+    top: -160px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(124,156,255,0.10);
+
+}
+
+
+.developer-photo {
+
+    width: 105px;
+
+    height: 105px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border:
+        3px solid var(--primary);
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.developer-info {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.credit-label {
+
+    color: var(--accent);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+}
+
+
+.developer-info h3 {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.credit-text {
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+}
+
+
+.credit-badge {
+
+    margin-left: auto;
+
+    color: var(--primary);
+
+    padding: 10px 16px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(124,156,255,0.08);
+
+    border:
+        1px solid
+        rgba(124,156,255,0.15);
+
+}
+
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    border-top:
+        1px solid var(--border);
+
+    padding: 35px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+}
+
+
+.footer-logo {
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+}
+
+
+.footer-logo span {
+
+    color: var(--accent);
+
+}
+
+
+footer p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 18px;
+
+}
+
+
+.footer-links a {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+.footer-links a:hover {
+
+    color: white;
+
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 50px;
+
+    }
+
+
+    .hero-content {
+
+        margin: auto;
+
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+
+    }
+
+
+    .emotion-preview {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .steps-container,
+    .features-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .credit-card {
+
+        text-align: center;
+
+        flex-direction: column;
+
+    }
+
+
+    .credit-badge {
+
+        margin: 0;
+
+    }
+
+
+}
+
+
+@media (max-width: 600px) {
+
+
+    .nav-links {
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .section-heading h2,
+    .cta-box h2 {
+
+        font-size: 34px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+    }
+
+
+    .floating-one {
+
+        right: 0;
+
+    }
+
+
+    .floating-two {
+
+        left: 0;
+
+    }
+
+
+}
+/* =========================================
+   MOODVISION AI - VISUAL ENHANCEMENT
+   Paste this at the END of existing CSS
+========================================= */
+
+/* Animated premium background */
+body {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(124, 92, 255, 0.16), transparent 28%),
+        radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.12), transparent 30%),
+        radial-gradient(circle at 50% 90%, rgba(45, 212, 191, 0.10), transparent 30%),
+        linear-gradient(135deg, #08111f 0%, #101a31 45%, #0a1625 100%) !important;
+
+    background-attachment: fixed;
+}
+
+
+/* Subtle glowing atmosphere */
+body::before {
+    content: "";
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    top: -180px;
+    left: -150px;
+    background: rgba(124, 92, 255, 0.12);
+    filter: blur(100px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    bottom: -150px;
+    right: -100px;
+    background: rgba(45, 212, 191, 0.10);
+    filter: blur(100px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* Navbar glass effect */
+.navbar {
+    background: rgba(10, 20, 38, 0.65) !important;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+/* Better navigation hover */
+.nav-links a {
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #7c5cff !important;
+    text-shadow: 0 0 15px rgba(124, 92, 255, 0.6);
+}
+
+
+/* Premium Try Now button */
+.nav-cta,
+.btn-primary,
+.hero-buttons a:first-child {
+    background: linear-gradient(
+        135deg,
+        #7c5cff,
+        #5b8cff,
+        #42c7d8
+    ) !important;
+
+    box-shadow:
+        0 10px 30px rgba(92, 92, 255, 0.28);
+
+    transition: 0.3s ease;
+}
+
+.nav-cta:hover,
+.btn-primary:hover,
+.hero-buttons a:first-child:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 15px 40px rgba(92, 92, 255, 0.45);
+}
+
+
+/* Hero title enhancement */
+.hero h1 {
+    text-shadow:
+        0 5px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Gradient for highlighted text */
+.gradient-text,
+.hero h1 span {
+    background: linear-gradient(
+        90deg,
+        #8da9ff,
+        #58c7ff,
+        #72e0c7
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Hero cards / AI emotion panel */
+.emotion-card,
+.hero-card,
+.analysis-card {
+    background: rgba(21, 32, 52, 0.72) !important;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(130, 150, 255, 0.18) !important;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+
+/* Glow behind AI card */
+.hero-card,
+.analysis-card {
+    position: relative;
+}
+
+.hero-card::before,
+.analysis-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+
+    background: linear-gradient(
+        135deg,
+        rgba(124, 92, 255, 0.25),
+        transparent 40%,
+        rgba(45, 212, 191, 0.18)
+    );
+
+    z-index: -1;
+    filter: blur(15px);
+}
+
+
+/* Section cards */
+.step-card,
+.feature-card,
+.card {
+    background: rgba(20, 30, 49, 0.72) !important;
+
+    border: 1px solid rgba(140, 160, 255, 0.13) !important;
+
+    transition:
+        transform 0.3s ease,
+        border 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Card hover */
+.step-card:hover,
+.feature-card:hover,
+.card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(124, 92, 255, 0.45) !important;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(124, 92, 255, 0.12);
+}
+
+
+/* Section headings */
+section h2 {
+    text-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Smooth appearance */
+section {
+    position: relative;
+}
+
+
+/* Footer */
+footer {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(12, 20, 38, 0.95),
+            rgba(20, 25, 55, 0.95)
+        ) !important;
+
+    border-top:
+        1px solid rgba(124, 92, 255, 0.15);
+}
+/* =========================================
+   MOODVISION AI - VISUAL ENHANCEMENTS
+   Paste at the VERY END of style.css
+========================================= */
+
+body {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(124, 92, 255, 0.18), transparent 28%),
+        radial-gradient(circle at 85% 30%, rgba(70, 226, 194, 0.12), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(47, 128, 237, 0.10), transparent 35%),
+        #0b1220;
+    background-attachment: fixed;
+}
+
+/* Decorative background glow */
+body::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: rgba(124, 92, 255, 0.10);
+    filter: blur(100px);
+    top: -180px;
+    left: -180px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: rgba(70, 226, 194, 0.08);
+    filter: blur(100px);
+    bottom: -180px;
+    right: -150px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* NAVBAR */
+.navbar {
+    background: rgba(15, 23, 42, 0.72);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+}
+
+
+/* Main heading enhancement */
+.hero h1 {
+    text-shadow: 0 10px 35px rgba(0, 0, 0, 0.28);
+}
+
+
+/* Highlight gradient */
+.gradient-text,
+.hero h1 span {
+    background: linear-gradient(90deg, #8da9ff, #65d9e8, #6ee7c8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+
+/* AI CARD / RIGHT SIDE */
+.emotion-card,
+.hero-card,
+.scan-card {
+    background: linear-gradient(
+        145deg,
+        rgba(30, 41, 59, 0.92),
+        rgba(15, 23, 42, 0.88)
+    );
+
+    border: 1px solid rgba(141, 169, 255, 0.25);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.30),
+        0 0 45px rgba(124, 92, 255, 0.08);
+}
+
+
+/* Buttons */
+.btn,
+button,
+.try-btn {
+    box-shadow: 0 10px 30px rgba(124, 92, 255, 0.25);
+    transition: all 0.3s ease;
+}
+
+.btn:hover,
+button:hover,
+.try-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(124, 92, 255, 0.38);
+}
+
+
+/* Navigation links */
+.nav-links a {
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #7ce7df;
+}
+
+
+/* Floating glow around important cards */
+.card,
+.step-card,
+.feature-card {
+    background: rgba(22, 32, 50, 0.82);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.card:hover,
+.step-card:hover,
+.feature-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(124, 92, 255, 0.35);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25),
+        0 0 30px rgba(124, 92, 255, 0.10);
+}
+
+
+/* Smooth website appearance */
+section {
+    position: relative;
+}
+
+
+/* Logo subtle effect */
+.logo img,
+.brand img {
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover,
+.brand img:hover {
+    transform: scale(1.06);
+}
+
+
+/* Better text contrast */
+p {
+    color: #b7c2d3;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    body::before,
+    body::after {
+        display: none;
+    }
+
+}
+/* =========================================
+   MOODVISION AI - PINK FUTURISTIC THEME
+========================================= */
+
+body {
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255, 72, 145, 0.20), transparent 30%),
+        radial-gradient(circle at 90% 15%, rgba(198, 104, 255, 0.18), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(255, 112, 170, 0.12), transparent 40%),
+        linear-gradient(135deg, #130b1f 0%, #1b0d27 45%, #100b1c 100%);
+    
+    background-attachment: fixed;
+}
+
+
+/* PINK GLOW - TOP LEFT */
+
+body::before {
+    content: "";
+    position: fixed;
+
+    width: 550px;
+    height: 550px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 60, 150, 0.14);
+
+    filter: blur(120px);
+
+    top: -220px;
+    left: -180px;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* PURPLE GLOW - BOTTOM RIGHT */
+
+body::after {
+    content: "";
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(190, 80, 255, 0.12);
+
+    filter: blur(120px);
+
+    bottom: -200px;
+    right: -150px;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background: rgba(27, 13, 39, 0.75);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 150, 210, 0.12);
+}
+
+
+/* ================= NAV LINKS ================= */
+
+.nav-links a {
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff75b5;
+}
+
+
+/* ================= MAIN TITLE ================= */
+
+.hero h1 {
+    text-shadow: 0 12px 40px rgba(255, 50, 150, 0.15);
+}
+
+
+/* Gradient text */
+
+.gradient-text,
+.hero h1 span {
+
+    background: linear-gradient(
+        90deg,
+        #ff70b5,
+        #ff9acb,
+        #c98bff
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ================= AI / EMOTION CARD ================= */
+
+.emotion-card,
+.hero-card,
+.scan-card {
+
+    background: linear-gradient(
+        145deg,
+        rgba(48, 22, 52, 0.92),
+        rgba(25, 13, 38, 0.92)
+    );
+
+    border: 1px solid rgba(255, 130, 190, 0.22);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35),
+        0 0 45px rgba(255, 80, 160, 0.10);
+}
+
+
+/* ================= BUTTONS ================= */
+
+.btn,
+button,
+.try-btn {
+
+    background: linear-gradient(
+        135deg,
+        #ff5ca8,
+        #c875ff
+    );
+
+    box-shadow:
+        0 12px 35px rgba(255, 70, 160, 0.28);
+
+    transition: all 0.3s ease;
+}
+
+
+.btn:hover,
+button:hover,
+.try-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 20px 45px rgba(255, 70, 160, 0.42);
+}
+
+
+/* ================= FEATURE CARDS ================= */
+
+.card,
+.step-card,
+.feature-card {
+
+    background: rgba(38, 20, 47, 0.78);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 170, 215, 0.10);
+
+    transition: all 0.35s ease;
+}
+
+
+.card:hover,
+.step-card:hover,
+.feature-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: rgba(255, 110, 180, 0.40);
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.28),
+        0 0 35px rgba(255, 70, 160, 0.12);
+}
+
+
+/* ================= BADGE ================= */
+
+.badge,
+.hero-badge {
+
+    background: rgba(255, 90, 170, 0.08);
+
+    border: 1px solid rgba(255, 120, 190, 0.25);
+
+    color: #ff9bca;
+
+    box-shadow:
+        0 0 25px rgba(255, 70, 160, 0.08);
+}
+
+
+/* ================= TEXT ================= */
+
+p {
+    color: #d5c4d8;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo img,
+.brand img {
+
+    transition: 0.3s ease;
+}
+
+
+.logo img:hover,
+.brand img:hover {
+
+    transform: scale(1.06);
+
+    filter: drop-shadow(
+        0 0 12px rgba(255, 100, 180, 0.35)
+    );
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    body::before,
+    body::after {
+        display: none;
+    }
+
+}
+/* ==========================================
+   MOODVISION AI – PASTEL PINK & PURPLE THEME
+========================================== */
+
+:root {
+    --bg-main: #fff5fa;
+    --bg-soft: #fdf0ff;
+    --pink-light: #ffd6e7;
+    --pink: #f7a8c8;
+    --pink-dark: #dc6fa0;
+    --purple-light: #eadcff;
+    --purple: #cdb4ff;
+    --purple-dark: #9b7ede;
+    --lavender: #f3edff;
+    --text-main: #49354d;
+    --text-soft: #806b82;
+}
+
+
+/* ===== WHOLE WEBSITE BACKGROUND ===== */
+
+body {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            #ffd9ea 0%,
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 20%,
+            #e5d5ff 0%,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            #ffddec 0%,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff7fb,
+            #f9f1ff,
+            #fff2f8
+        );
+
+    color: var(--text-main);
+}
+
+
+/* Remove old dark overlays */
+
+body::before,
+body::after {
+    display: none;
+}
+
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+    background: rgba(255, 245, 250, 0.82) !important;
+
+    backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid rgba(220, 111, 160, 0.15);
+
+    box-shadow:
+        0 5px 25px rgba(190, 130, 180, 0.10);
+}
+
+
+/* ===== NAVIGATION ===== */
+
+.nav-links a {
+    color: #765b76 !important;
+}
+
+.nav-links a:hover {
+    color: #dc6fa0 !important;
+}
+
+
+/* ===== LOGO TEXT ===== */
+
+.logo,
+.brand,
+.logo-text {
+    color: #49354d !important;
+}
+
+
+/* ===== HERO ===== */
+
+.hero {
+    background: transparent !important;
+}
+
+
+/* ===== MAIN HEADING ===== */
+
+.hero h1 {
+    color: #49354d !important;
+
+    text-shadow:
+        0 8px 25px rgba(220, 111, 160, 0.12);
+}
+
+
+/* Gradient word */
+
+.gradient-text,
+.hero h1 span {
+
+    background:
+        linear-gradient(
+            90deg,
+            #ee8fbb,
+            #c9a2f5,
+            #e69bc2
+        ) !important;
+
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+
+    -webkit-text-fill-color: transparent !important;
+}
+
+
+/* ===== PARAGRAPH TEXT ===== */
+
+.hero p,
+p {
+    color: #806b82 !important;
+}
+
+
+/* ===== AI BADGE ===== */
+
+.badge,
+.hero-badge {
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffe1ee,
+            #efe3ff
+        ) !important;
+
+    border:
+        1px solid #efb5d0 !important;
+
+    color: #b75f8b !important;
+
+    box-shadow:
+        0 8px 25px rgba(220, 111, 160, 0.12);
+}
+
+
+/* ===== BUTTONS ===== */
+
+.btn,
+.try-btn,
+button {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f3a4c7,
+            #cba7f4
+        ) !important;
+
+    color: white !important;
+
+    border: none !important;
+
+    box-shadow:
+        0 10px 30px rgba(200, 130, 190, 0.28);
+}
+
+
+.btn:hover,
+.try-btn:hover,
+button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 18px 40px rgba(200, 130, 190, 0.35);
+}
+
+
+/* ===== HERO EMOTION CARD ===== */
+
+.emotion-card,
+.hero-card,
+.scan-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 248, 252, 0.95),
+            rgba(243, 235, 255, 0.95)
+        ) !important;
+
+    border:
+        1px solid rgba(210, 170, 230, 0.45) !important;
+
+    box-shadow:
+        0 20px 60px rgba(180, 120, 180, 0.16) !important;
+
+    color: #49354d !important;
+}
+
+
+/* ===== ALL CARDS ===== */
+
+.card,
+.step-card,
+.feature-card,
+.result-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff9fc,
+            #f6eeff
+        ) !important;
+
+    border:
+        1px solid #ead3eb !important;
+
+    box-shadow:
+        0 15px 40px rgba(190, 140, 190, 0.12);
+
+    color: #49354d !important;
+
+    transition: 0.3s ease;
+}
+
+
+.card:hover,
+.step-card:hover,
+.feature-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 22px 50px rgba(210, 120, 180, 0.20);
+
+    border-color: #e6a5c6 !important;
+}
+
+
+/* ===== SECTIONS ===== */
+
+section {
+    background: transparent !important;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    background:
+        linear-gradient(
+            135deg,
+            #f9e6f0,
+            #eee3fa
+        ) !important;
+
+    border-top:
+        1px solid #ead3eb !important;
+
+    color: #70586f !important;
+}
+
+
+/* ===== DEVELOPER CREDIT ===== */
+
+.developer-credit {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffeaf3,
+            #f1e8ff
+        ) !important;
+}
+
+
+.credit-card {
+
+    background:
+        rgba(255, 255, 255, 0.65) !important;
+
+    border:
+        1px solid #e9cce0 !important;
+
+    box-shadow:
+        0 15px 45px rgba(190, 120, 180, 0.15);
+}
+
+
+.developer-info h3 {
+    color: #b35d88 !important;
+}
+
+
+.credit-label {
+    color: #9b7ede !important;
+}
+
+
+.credit-text {
+    color: #806b82 !important;
+}
+/* =========================================
+   FINAL PASTEL PINK + PURPLE THEME
+   ========================================= */
+
+html,
+body {
+    background: linear-gradient(
+        135deg,
+        #fff5fa 0%,
+        #fce7f3 30%,
+        #f3e8ff 65%,
+        #fdf2f8 100%
+    ) !important;
+
+    color: #4a3048 !important;
+}
+
+
+/* MAIN PAGE SECTIONS */
+
+.hero,
+.hero-section,
+main,
+section {
+    background-color: transparent !important;
+}
+
+
+/* HERO BACKGROUND */
+
+.hero {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(251, 182, 206, 0.45), transparent 28%),
+        radial-gradient(circle at 85% 30%, rgba(216, 180, 254, 0.45), transparent 30%),
+        linear-gradient(
+            135deg,
+            #fff7fb,
+            #fce7f3,
+            #f3e8ff
+        ) !important;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    background: rgba(255, 245, 250, 0.88) !important;
+    border-bottom: 1px solid rgba(196, 130, 180, 0.25) !important;
+    backdrop-filter: blur(15px);
+}
+
+
+/* NAV LINKS */
+
+.nav-links a,
+.navbar a {
+    color: #7c4a6b !important;
+}
+
+.nav-links a:hover,
+.navbar a:hover {
+    color: #db2777 !important;
+}
+
+
+/* HEADINGS */
+
+h1,
+h2,
+h3 {
+    color: #5b365f !important;
+}
+
+
+/* GRADIENT TEXT */
+
+.gradient-text {
+    background: linear-gradient(
+        90deg,
+        #ec4899,
+        #c084fc,
+        #a855f7
+    ) !important;
+
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+
+    -webkit-text-fill-color: transparent !important;
+}
+
+
+/* NORMAL TEXT */
+
+p {
+    color: #76566e !important;
+}
+
+
+/* BUTTONS */
+
+.primary-btn,
+.cta-btn,
+button {
+    background: linear-gradient(
+        135deg,
+        #f9a8d4,
+        #c4b5fd
+    ) !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+
+    box-shadow:
+        0 10px 25px rgba(192, 132, 252, 0.25) !important;
+}
+
+
+.primary-btn:hover,
+.cta-btn:hover,
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(236, 72, 153, 0.28) !important;
+}
+
+
+/* CARDS */
+
+.emotion-card,
+.hero-card,
+.step-card,
+.feature-card,
+.credit-card {
+    background: rgba(255, 255, 255, 0.72) !important;
+
+    border: 1px solid rgba(236, 72, 153, 0.16) !important;
+
+    box-shadow:
+        0 15px 35px rgba(192, 132, 252, 0.12) !important;
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* HOW IT WORKS */
+
+.how-it-works,
+.steps-section {
+    background:
+        linear-gradient(
+            135deg,
+            #fdf2f8,
+            #f3e8ff
+        ) !important;
+}
+
+
+/* DEVELOPER SECTION */
+
+.developer-credit {
+    background:
+        linear-gradient(
+            135deg,
+            #fce7f3,
+            #f3e8ff,
+            #fff1f7
+        ) !important;
+}
+
+
+/* FOOTER */
+
+footer {
+    background:
+        linear-gradient(
+            90deg,
+            #fce7f3,
+            #f3e8ff
+        ) !important;
+
+    color: #76566e !important;
+}
+/* =========================================
+   RICH PASTEL PINK + PURPLE – HIGH CONTRAST
+   ========================================= */
+
+html,
+body {
+    background: linear-gradient(
+        135deg,
+        #f8d7e6 0%,
+        #e8d5f5 45%,
+        #d9c2eb 100%
+    ) !important;
+
+    color: #35223f !important;
+}
+
+
+/* MAIN HERO */
+
+.hero {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(244, 114, 182, 0.30), transparent 30%),
+        radial-gradient(circle at 85% 30%, rgba(168, 85, 247, 0.28), transparent 32%),
+        linear-gradient(
+            135deg,
+            #f7d5e4,
+            #e9d5f5,
+            #d9c5ed
+        ) !important;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    background: rgba(255, 238, 247, 0.88) !important;
+    border-bottom: 1px solid #d8a8c8 !important;
+}
+
+
+/* NAVIGATION */
+
+.nav-links a,
+.navbar a {
+    color: #512b4b !important;
+    font-weight: 600 !important;
+}
+
+
+/* MAIN HEADINGS */
+
+h1,
+h2,
+h3 {
+    color: #35223f !important;
+    font-weight: 800 !important;
+}
+
+
+/* HERO NORMAL TEXT */
+
+.hero p,
+.hero-description,
+p {
+    color: #5e4059 !important;
+    font-weight: 500 !important;
+}
+
+
+/* GRADIENT EXPRESSION TEXT */
+
+.gradient-text {
+    background: linear-gradient(
+        90deg,
+        #d63384,
+        #a855f7,
+        #7c3aed
+    ) !important;
+
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+
+/* AI POWERED BADGE */
+
+.hero-badge,
+.badge {
+    background: #fce1ef !important;
+    border: 1px solid #e78ab5 !important;
+    color: #8b2858 !important;
+    font-weight: 700 !important;
+}
+
+
+/* PRIMARY BUTTON */
+
+.primary-btn,
+.cta-btn,
+button {
+    background: linear-gradient(
+        135deg,
+        #d946a6,
+        #9b5de5
+    ) !important;
+
+    color: white !important;
+    font-weight: 700 !important;
+
+    box-shadow:
+        0 12px 28px rgba(155, 93, 229, 0.30) !important;
+}
+
+
+/* SECONDARY BUTTON */
+
+.secondary-btn {
+    background: rgba(255, 255, 255, 0.6) !important;
+    border: 2px solid #b76bc7 !important;
+    color: #6d285e !important;
+    font-weight: 700 !important;
+}
+
+
+/* MAIN AI SCAN CARD */
+
+.hero-card,
+.analysis-card {
+    background: linear-gradient(
+        145deg,
+        #51345f,
+        #38263f
+    ) !important;
+
+    border: 1px solid #c084c9 !important;
+
+    box-shadow:
+        0 20px 45px rgba(81, 35, 85, 0.30) !important;
+}
+
+
+/* TEXT INSIDE DARK AI CARD */
+
+.hero-card *,
+.analysis-card * {
+    color: #f9e9f5 !important;
+}
+
+
+/* EMOTION TITLE */
+
+.hero-card h2,
+.hero-card h3,
+.analysis-card h2,
+.analysis-card h3 {
+    color: #ffffff !important;
+}
+
+
+/* FLOATING CARDS */
+
+.floating-card,
+.smart-analysis,
+.real-time-results,
+.status-card {
+    background: linear-gradient(
+        135deg,
+        #7b3f72,
+        #613a78
+    ) !important;
+
+    border: 1px solid #e8a5d0 !important;
+
+    color: white !important;
+
+    box-shadow:
+        0 10px 25px rgba(90, 45, 95, 0.25) !important;
+}
+
+
+/* EMOTION RESULT CARD */
+
+.emotion-card,
+.emotion-summary,
+.result-summary {
+    background: linear-gradient(
+        135deg,
+        #fff0f7,
+        #eadcff
+    ) !important;
+
+    border: 1px solid #c991bb !important;
+
+    box-shadow:
+        0 12px 30px rgba(173, 92, 156, 0.18) !important;
+}
+
+
+/* CARD TEXT */
+
+.emotion-card h3,
+.emotion-summary h3,
+.result-summary h3 {
+    color: #4b2447 !important;
+}
+
+.emotion-card p,
+.emotion-summary p,
+.result-summary p {
+    color: #704d68 !important;
+}
+
+
+/* CONFIDENCE */
+
+.confidence,
+.confidence-value,
+.percentage {
+    color: #c0267b !important;
+    font-weight: 800 !important;
+}
+
+
+/* HOW IT WORKS */
+
+.how-it-works,
+.steps-section {
+    background: linear-gradient(
+        135deg,
+        #f5cfe0,
+        #e2cef0
+    ) !important;
+}
+
+
+/* STEP CARDS */
+
+.step-card,
+.feature-card {
+    background: rgba(255, 248, 252, 0.88) !important;
+    border: 1px solid #d89abc !important;
+    color: #482642 !important;
+
+    box-shadow:
+        0 12px 30px rgba(141, 70, 120, 0.15) !important;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: linear-gradient(
+        90deg,
+        #8c4b7d,
+        #6d4b91
+    ) !important;
+
+    color: white !important;
+}
+
+footer * {
+    color: white !important;
+}
+/* FIX TEXT VISIBILITY IN FEATURE CARDS */
+
+.feature-card,
+.why-card,
+.info-card {
+    color: #ffffff !important;
+}
+
+.feature-card h3,
+.why-card h3,
+.info-card h3 {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+.feature-card p,
+.why-card p,
+.info-card p {
+    color: #f3e8ff !important;
+    font-weight: 500;
+    opacity: 1 !important;
+}
+/* =========================================
+   HERO SECTION - PINK & PURPLE THEME
+========================================= */
+
+/* Main AI emotion card */
+.hero-card,
+.emotion-card {
+    background: linear-gradient(
+        145deg,
+        #3f2948,
+        #5a355c
+    ) !important;
+
+    border: 1px solid #e6a6cf !important;
+
+    box-shadow:
+        0 20px 50px rgba(186, 104, 151, 0.25) !important;
+}
+
+/* Card headings */
+.hero-card h2,
+.hero-card h3,
+.emotion-card h2,
+.emotion-card h3 {
+    color: #ffffff !important;
+}
+
+/* Card normal text */
+.hero-card p,
+.emotion-card p {
+    color: #f8dced !important;
+    opacity: 1 !important;
+}
+
+/* Small labels */
+.hero-card span,
+.emotion-card span,
+.scan-label,
+.emotion-label {
+    color: #f3b6d5 !important;
+}
+
+/* HAPPY emotion text */
+.detected-emotion,
+.emotion-name {
+    color: #ff9dca !important;
+}
+
+/* Confidence text */
+.confidence,
+.confidence-value {
+    color: #8ff0d0 !important;
+}
+
+/* Floating Smart Analysis box */
+.smart-analysis,
+.analysis-badge {
+    background: linear-gradient(
+        135deg,
+        #d477a8,
+        #8e6ad8
+    ) !important;
+
+    color: white !important;
+
+    border: 1px solid #ffd1e5 !important;
+
+    box-shadow:
+        0 10px 30px rgba(181, 95, 160, 0.35) !important;
+}
+
+/* Real-time Results floating badge */
+.results-badge,
+.realtime-badge {
+    background: linear-gradient(
+        135deg,
+        #8f4775,
+        #673f83
+    ) !important;
+
+    color: white !important;
+
+    border: 1px solid #f2a8cf !important;
+}
+
+/* Bottom detected emotion card */
+.emotion-result,
+.result-card {
+    background: linear-gradient(
+        135deg,
+        #51384f,
+        #6a4768
+    ) !important;
+
+    border: 1px solid #e8a5ca !important;
+
+    box-shadow:
+        0 15px 35px rgba(172, 89, 143, 0.2) !important;
+}
+
+.emotion-result h3,
+.result-card h3 {
+    color: #ffb3d9 !important;
+}
+
+.emotion-result p,
+.result-card p {
+    color: #fff0f8 !important;
+}
+/* =========================================
+   MAKE ALL SECTION CARDS MATCH LIGHT STYLE
+========================================= */
+
+/* Light pastel cards */
+.step-card,
+.feature-card,
+.why-card,
+.info-card,
+.card {
+    background: rgba(255, 250, 253, 0.88) !important;
+    border: 1px solid #e7a8c5 !important;
+
+    box-shadow:
+        0 12px 30px rgba(170, 95, 145, 0.15) !important;
+
+    color: #40364d !important;
+}
+
+/* Card headings */
+.step-card h3,
+.feature-card h3,
+.why-card h3,
+.info-card h3,
+.card h3 {
+    color: #40364d !important;
+    font-weight: 700 !important;
+}
+
+/* Card descriptions */
+.step-card p,
+.feature-card p,
+.why-card p,
+.info-card p,
+.card p {
+    color: #5e5368 !important;
+    opacity: 1 !important;
+    font-weight: 500 !important;
+}
+
+/* Hover effect */
+.step-card:hover,
+.feature-card:hover,
+.why-card:hover,
+.info-card:hover,
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 18px 40px rgba(190, 105, 160, 0.25) !important;
+}
+/* ===== FINAL PINK / PURPLE AI CARDS ===== */
+
+.main-ai-card {
+    background: linear-gradient(
+        135deg,
+        #4b345c,
+        #6b456f
+    ) !important;
+
+    border: 1px solid #e8a8cf !important;
+    box-shadow: 0 20px 50px rgba(137, 70, 125, 0.25) !important;
+}
+
+/* Emotion preview */
+.emotion-preview {
+    background: linear-gradient(
+        135deg,
+        #5b4968,
+        #73566f
+    ) !important;
+
+    border: 1px solid #dca0c4 !important;
+}
+
+.emotion-preview h3,
+.emotion-preview p,
+.emotion-preview .emotion-label {
+    color: #fff4fb !important;
+}
+
+.emotion-preview strong {
+    color: #8ff0d0 !important;
+}
+
+
+/* Floating cards */
+.floating-card {
+    background: linear-gradient(
+        135deg,
+        #7b3f69,
+        #9b5b91
+    ) !important;
+
+    border: 1px solid #f2b6d5 !important;
+    color: #ffffff !important;
+
+    box-shadow: 0 12px 30px rgba(126, 55, 108, 0.28) !important;
+}
+
+.floating-card span {
+    color: #ffffff !important;
+}
+
+
+/* Text inside AI card */
+.main-ai-card,
+.main-ai-card p,
+.main-ai-card h2,
+.main-ai-card span {
+    color: #fff5fc !important;
+}
+
+.main-ai-card .scan-header span {
+    color: #f7d5e8 !important;
+}
+
+.main-ai-card .emotion-result p {
+    color: #e9b8d2 !important;
+}
+
+.main-ai-card .emotion-result h2 {
+    color: #ffffff !important;
+}
+/* Remove unwanted box around detected emotion */
+.main-ai-card .emotion-result {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+/* ================= ANALYZE PAGE - ONE SCREEN ================= */
+
+.analyze-page {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.analyze-page .navbar {
+    flex-shrink: 0;
+}
+
+.analyze-page .how-section {
+    flex: 1;
+    min-height: 0;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.analyze-page .section-heading {
+    margin-bottom: 20px;
+}
+
+.analyze-page .section-heading > p:first-child {
+    margin-bottom: 12px;
+}
+
+.analyze-page .camera-container {
+    margin: 0 auto;
+}
+
+.analyze-page .camera-preview {
+    min-height: 0;
+    height: auto;
+}
+
+.analyze-page footer {
+    flex-shrink: 0;
+    margin-top: 0;
+    padding: 18px 8%;
+}
+/* ===== ANALYZE PAGE FINAL SPACING FIX ===== */
+
+.analyze-page .how-section {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.analyze-page .section-heading {
+    margin-bottom: 10px;
+}
+
+.analyze-page .camera-container {
+    margin-top: 0;
+}
+
+.analyze-page .camera-preview {
+    padding-top: 15px;
+}
+
+.analyze-page .camera-container .step-icon {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+/* =========================================
+   CLEAN ANALYZE PAGE
+========================================= */
+
+.analyze-page {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.analyze-page .navbar {
+    flex-shrink: 0;
+}
+
+
+.analyze-section {
+    flex: 1;
+    padding: 20px 20px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.analyze-heading {
+    margin-bottom: 15px !important;
+}
+
+
+.analyze-heading h2 {
+    margin: 5px 0 !important;
+}
+
+
+.analyze-heading .section-description {
+    margin: 5px auto 0 !important;
+}
+
+
+.camera-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.camera-preview {
+    width: 100%;
+    min-height: 280px !important;
+    max-height: 330px;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#webcam {
+    width: 100%;
+    max-height: 330px;
+    object-fit: cover;
+    display: none;
+    border-radius: 25px;
+}
+
+
+#cameraPlaceholder {
+    text-align: center;
+}
+
+
+.camera-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+
+#cameraPlaceholder h2 {
+    margin: 0 0 10px;
+}
+
+
+#cameraPlaceholder p {
+    margin: 0;
+}
+
+
+.camera-buttons {
+    margin-top: 15px;
+}
+
+
+#cameraStatus {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+
+.analyze-page footer {
+    flex-shrink: 0;
+    margin-top: 0 !important;
+    padding: 16px 8%;
+}
+/* =========================================
+   ANALYZE PAGE - FINAL ALIGNMENT
+========================================= */
+
+.analyze-page {
+    min-height: calc(100vh - 90px);
+    padding: 25px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+/* HEADING */
+
+.analysis-heading {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 18px;
+}
+
+.analysis-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--muted);
+}
+
+.analysis-heading h1 {
+    font-size: 42px;
+    margin: 0 0 8px;
+    color: var(--text);
+}
+
+.analysis-heading h1 span {
+    color: #6f8edb;
+}
+
+.analysis-description {
+    margin: 0;
+    font-size: 16px;
+    color: var(--muted);
+}
+
+
+/* CAMERA CARD */
+
+.camera-container {
+    width: 100%;
+    max-width: 610px;
+    min-height: 430px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    background: rgba(130, 140, 200, 0.12);
+
+    box-sizing: border-box;
+}
+
+
+/* CAMERA PREVIEW */
+
+.camera-preview {
+    width: 100%;
+    max-width: 610px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#webcam {
+    width: 100%;
+    max-width: 610px;
+
+    border-radius: 22px;
+
+    display: none;
+
+    object-fit: cover;
+}
+
+
+/* PLACEHOLDER */
+
+.camera-placeholder {
+    text-align: center;
+}
+
+.camera-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.camera-placeholder h2 {
+    font-size: 32px;
+    margin: 0 0 10px;
+}
+
+.camera-placeholder p {
+    margin: 0;
+    color: var(--muted);
+}
+
+
+/* BUTTON AREA */
+
+.camera-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+
+/* BUTTONS */
+
+.primary-button,
+.secondary-button {
+
+    border: none;
+
+    padding: 14px 26px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #c03f91,
+        #7c4fd6
+    );
+
+}
+
+
+.primary-button:hover,
+.secondary-button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+/* STATUS */
+
+#cameraStatus {
+
+    margin-top: 12px;
+
+    text-align: center;
+
+    color: var(--muted);
+
+}
+
+
+/* RESULT BOX */
+
+.emotion-result {
+
+    margin-top: 20px;
+
+    padding: 18px 25px;
+
+    width: 100%;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.result-icon {
+
+    font-size: 35px;
+
+}
+
+
+.result-label {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: var(--muted);
+
+    margin: 0;
+
+}
+
+
+.emotion-result h2 {
+
+    margin: 5px 0;
+
+}
+
+
+#confidenceText {
+
+    margin: 0;
+
+    color: #71d7c0;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .analysis-heading h1 {
+        font-size: 32px;
+    }
+
+    .camera-container {
+        min-height: 400px;
+        max-width: 95%;
+    }
+
+}
+/* =========================================
+   ANALYZE PAGE - FINAL COMPACT LAYOUT
+========================================= */
+
+.analyze-page {
+    padding: 18px 20px 15px !important;
+    margin: 0 !important;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+
+/* HEADING */
+
+.analysis-heading {
+    width: 100%;
+    max-width: 850px;
+
+    text-align: center;
+
+    margin: 0 auto 16px !important;
+    padding: 0 !important;
+}
+
+.analysis-label {
+    margin: 0 0 6px !important;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.analysis-heading h1 {
+    margin: 0 0 6px !important;
+    font-size: 38px;
+}
+
+.analysis-heading h1 span {
+    color: #b94aa5;
+}
+
+.analysis-description {
+    margin: 0 auto !important;
+}
+
+
+/* CAMERA CARD */
+
+.analyze-page .camera-container {
+    width: 100% !important;
+    max-width: 500px !important;
+
+    min-height: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+
+    margin: 0 auto !important;
+
+    padding: 25px 30px 20px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box;
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(210, 110, 180, 0.18);
+}
+
+
+/* CAMERA PREVIEW */
+
+.analyze-page .camera-preview {
+    min-height: 0 !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* WEBCAM */
+
+.analyze-page #webcam {
+    display: none;
+
+    width: 100%;
+    max-height: 280px;
+
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+
+/* PLACEHOLDER */
+
+.analyze-page .camera-placeholder {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-align: center;
+}
+
+.analyze-page .camera-icon {
+    font-size: 40px;
+
+    margin: 0 0 8px !important;
+}
+
+.analyze-page .camera-placeholder h2 {
+    margin: 0 0 8px !important;
+
+    font-size: 28px;
+}
+
+.analyze-page .camera-placeholder p {
+    margin: 0 !important;
+}
+
+
+/* BUTTON */
+
+.analyze-page .camera-buttons {
+    margin: 16px 0 0 !important;
+    padding: 0 !important;
+
+    display: flex;
+    justify-content: center;
+}
+
+.analyze-page .camera-buttons button {
+    min-width: 180px;
+}
+
+
+/* STATUS */
+
+.analyze-page #cameraStatus {
+    margin: 10px 0 0 !important;
+
+    padding: 0 !important;
+}
+
+
+/* RESULT */
+
+.analyze-page .emotion-result {
+    width: 100%;
+
+    margin-top: 15px !important;
+
+    padding: 14px 18px;
+
+    box-sizing: border-box;
+}
+
+
+/* FOOTER */
+
+body:has(.analyze-page) footer {
+    margin-top: 15px !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .analyze-page {
+        padding: 15px;
+    }
+
+    .analysis-heading h1 {
+        font-size: 30px;
+    }
+
+    .analyze-page .camera-container {
+        max-width: 95% !important;
+        padding: 22px 18px 18px !important;
+    }
+
+}
+/* =========================================
+   MOODVISION AI - EMOTION RESULTS
+========================================= */
+
+.analyze-page .emotion-result {
+    width: 100%;
+    margin-top: 18px !important;
+    padding: 20px !important;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.09);
+
+    border: 1px solid rgba(210, 110, 180, 0.28);
+
+    box-shadow:
+        0 12px 35px rgba(120, 60, 150, 0.15);
+
+    box-sizing: border-box;
+}
+
+
+/* RESULT HEADER */
+
+.result-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-bottom: 15px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* EMOTION ICON */
+
+.result-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 115, 190, 0.35),
+            rgba(150, 100, 255, 0.35)
+        );
+}
+
+
+/* LABEL */
+
+.result-label {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: var(--muted);
+
+    margin: 0 0 4px;
+}
+
+
+/* DETECTED EMOTION */
+
+#detectedEmotion {
+    font-size: 28px;
+
+    margin: 0 0 4px;
+
+    color: white;
+}
+
+
+/* CONFIDENCE */
+
+#confidenceText {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #f2c4df;
+}
+
+
+/* =========================================
+   EMOTION SCORES
+========================================= */
+
+.emotion-scores {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.score-row {
+    display: grid;
+
+    grid-template-columns:
+        105px
+        1fr
+        50px;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 13px;
+}
+
+
+.score-row span {
+    color: white;
+}
+
+
+.score-row strong {
+    text-align: right;
+
+    color: #f5c5e1;
+
+    font-size: 12px;
+}
+
+
+/* SCORE BACKGROUND */
+
+.score-bar {
+    width: 100%;
+
+    height: 8px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+}
+
+
+/* SCORE FILL */
+
+.score-bar div {
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e85da9,
+            #a875e8
+        );
+
+    transition:
+        width 0.7s ease;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .score-row {
+
+        grid-template-columns:
+            90px
+            1fr
+            42px;
+
+        gap: 8px;
+
+        font-size: 11px;
+
+    }
+
+}
